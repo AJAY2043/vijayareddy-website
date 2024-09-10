@@ -1,0 +1,121 @@
+/* Global reset for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Navbar container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .nav-title h2 {
+    font-size: 1.8rem;
+    color: #4A00E0;
+    background: linear-gradient(45deg, #FF512F, #DD2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-search input {
+    padding: 0.8rem;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+  }
+  
+  .nav-search input::placeholder {
+    color: #666;
+  }
+  
+  /* Navigation links */
+  .nav-about h3, .nav-collab h3, .nav-contact h3, .nav-blog h3 {
+    font-size: 1.2rem;
+    color: #3A00E0;
+    background: linear-gradient(90deg, #3A1C71 0%, #D76D77 50%, #FFAF7B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-about h3:hover, .nav-collab h3:hover, .nav-contact h3:hover, .nav-blog h3:hover {
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hamburger menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+  }
+  
+  /* Mobile menu styles */
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  
+  .nav-menu {
+    display: none;
+  }
+  
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .nav-title {
+      margin-bottom: 1rem;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  }
+  

@@ -1,0 +1,178 @@
+/* General Styles */
+.about-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Premium gradient background */
+  color: #fff; /* White text to contrast the gradient */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 40px;
+  font-weight: 700;
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* About Content */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Align content in a row on larger screens */
+  align-items: center;
+  gap: 20px;
+  animation: slideUp 1.2s ease-in-out;
+}
+
+.about-text {
+  flex: 1 1 100%; /* Full width on mobile */
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0; /* Softer white for paragraph text */
+}
+
+/* Icon Section */
+.about-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+}
+
+.icon-item {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  text-align: center;
+  margin: 10px;
+  flex: 1 1 30%;
+  position: relative;
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.icon-item:hover {
+  transform: translateY(-10px); /* Subtle lift effect on hover */
+  background: rgba(255, 255, 255, 0.2); /* Slightly change background on hover */
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #ffeb3b; /* Icon color (premium gold) */
+  margin-bottom: 15px;
+  animation: bounce 2s infinite;
+}
+
+.icon-item h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.icon-item p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive Design for Tablets and Desktops */
+@media (min-width: 769px) {
+  .about-content {
+    flex-direction: row; /* Align icons in a row on larger screens */
+  }
+
+  .about-icons {
+    justify-content: space-around; /* Space out the icons evenly */
+  }
+
+  .about-text {
+    flex-basis: 40%; /* Give the text section some space on larger screens */
+  }
+
+  .icon-item {
+    flex-basis: 25%; /* Each icon item will occupy 25% of the row */
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    text-align: center;
+  }
+  
+  .about-text, .about-icons {
+    flex-basis: 100%; /* Full width for text and icons */
+  }
+
+  .icon-item {
+    flex-basis: 100%; /* Full width for icon items */
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .icon-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .icon-item p {
+    font-size: 0.9rem;
+  }
+}
