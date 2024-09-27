@@ -26,13 +26,16 @@ const Footer = () => {
       </div>
       <div className="footer-social-icon">
         <div className="footer-icons-container">
-          <img src={instgram_icon} alt="Instagram" />
+        <a href="https://wa.me/9182945491" target="_blank" rel="noopener noreferrer">
+          <img src={instgram_icon} alt="Instagram" /></a>
         </div>
         <div className="footer-icons-container">
-          <img src={pintester_icon} alt="Pinterest" />
+        <a href="https://wa.me/9182945491" target="_blank" rel="noopener noreferrer">
+          <img src={pintester_icon} alt="Pinterest" /></a>
         </div>
         <div className="footer-icons-container">
-          <img src={whatsapp_icon} alt="WhatsApp" />
+        <a href="https://wa.me/9182945491" target="_blank" rel="noopener noreferrer">
+          <img src={whatsapp_icon} alt="WhatsApp" /></a>
         </div>
       </div>
       <div className="footer-copyright">

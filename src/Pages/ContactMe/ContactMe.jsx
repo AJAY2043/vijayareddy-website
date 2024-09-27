@@ -5,10 +5,7 @@ import Footer from '../../Components/Footer/Footer';
 import './ContactMe.css';
 
 const ContactMe = () => {
-  const handleContactClick = () => {
-    alert('Contact Number: 9182945491');
-  };
-
+  
   return (
     <>
       <Navbar />
@@ -26,9 +23,10 @@ const ContactMe = () => {
           <p>
             You can contact me via phone or Whatsapp I look forward to connecting with you!
           </p>
-          <button className="contact-btn" onClick={handleContactClick}>
+          <a href="https://wa.me/9182945491" target="_blank" rel="noopener noreferrer">
+          <button className="contact-btn" >
             Contact Now
-          </button>
+          </button></a>
         </div>
       </div>
       <Footer />

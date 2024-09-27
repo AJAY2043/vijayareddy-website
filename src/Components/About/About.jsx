@@ -11,7 +11,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              We are a leading company specializing in innovative solutions and exceptional services. With a passion for excellence, we strive to deliver the highest quality products and services to our clients. Our team of experts is dedicated to exceeding your expectations and providing unparalleled customer satisfaction.
+              We are a freelance organization specializing in innovative solutions and exceptional services. With a passion for excellence, we strive to deliver the highest quality products and services to our clients. Our team of experts is dedicated to exceeding your expectations and providing unparalleled customer satisfaction.
             </p>
             <p>
               Our mission is to drive progress through technology and creativity. Whether you are looking for cutting-edge solutions, reliable support, or strategic insights, we are here to help you achieve your goals.
