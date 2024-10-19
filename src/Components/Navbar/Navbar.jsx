@@ -1,30 +1,45 @@
-import React from 'react'
-import './Navbar.css'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import './navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
+
   return (
-    <div className='navbar'>
-      <div className="nav-title">
-        <Link to='/' style={{ textDecoration: 'none' }} ><h2>Vijaya Reddy's</h2></Link>
+    <div className={`navbar ${isActive ? 'active' : ''}`}>
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <h3>Annapurna Matrimony</h3>
+      </Link>
+
+      <div className="hamburger" onClick={toggleMenu}>
+        &#9776;
       </div>
-      <div className="nav-search">
-        <input type='text' placeholder='know more about me...'/>
+
+      <div className={`nav-menu ${isActive ? 'active' : ''}`}>
+        <Link to="/" style={{ textDecoration: 'none' }}>Home</Link>
+        <Link to="/aboutus" style={{ textDecoration: 'none' }}>About Us</Link>
+        <Link to="/carrers" style={{ textDecoration: 'none' }}>Careers</Link>
+        <Link to="/contactus" style={{ textDecoration: 'none' }}>Contact Us</Link>
+        <Link to="/CMDdesk" style={{ textDecoration: 'none' }}>CMD Desk</Link>
+        <Link to="/help" style={{ textDecoration: 'none' }}>Help</Link>
       </div>
-      <div className="nav-about">
-        <Link to='/aboutme' style={{ textDecoration: 'none' }}><h3>AboutMe</h3></Link>
-      </div>
-      <div className="nav-collab">
-        <Link to='/collabrationsWithMe' style={{ textDecoration: 'none' }}><h3>Collabtrate with me </h3></Link>
-      </div>
-      <div className="nav-contact">
-        <Link to='/contactme' style={{ textDecoration: 'none' }}><h3>ContactMe</h3></Link>
-      </div>
-      <div className="nav-blog">
-        <Link to='/myblogs' style={{ textDecoration: 'none' }}><h3>My Blog</h3></Link>
+
+      {/* <div className="rigester">
+        <Link to="/register" style={{ textDecoration: 'none' }}>
+          <p>Register For Free</p>
+        </Link>
+      </div> */}
+      <div className="login">
+        <Link to="/signinsignup" style={{ textDecoration: 'none' }}>
+          <p>SignIn/SignUp</p>
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

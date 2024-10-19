@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
-import Sections from './Sections'
 import Footer from '../Footer/Footer'
+import Hero from '../Hero/Hero'
 
 const LandingPage = () => {
   return (
     <div>
       <Navbar/>
-      <Sections/>
+      <Hero/>
       <Footer/>
     </div>
   )
